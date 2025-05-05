@@ -2,3 +2,21 @@
 // See _variables.scss in https://github.com/openedx/paragon/blob/master/scss/core/ for reference
 $primary: #1a263c !default;
 $brand:   #D3985C !default;
+// Brand text colors
+$brand-text-color: $white !default;
+$brand-hover-text-color: $gray-900 !default;
+
+// Update theme colors
+$theme-colors: map.merge(
+  (
+    "brand": (
+      "base": $brand,
+      "text": $brand-text-color,
+      "hover-text": $brand-hover-text-color,
+    ),
+  ),
+  $theme-colors
+);
+
+// Adjust contrast threshold if needed
+$yiq-contrasted-threshold: 180 !default;
