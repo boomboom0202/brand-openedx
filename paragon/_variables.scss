@@ -6,17 +6,3 @@ $brand:   #D3985C !default;
 $brand-text-color: #fff !default;
 $brand-hover-text-color: #1C1C1C !default;
 
-// Update theme colors
-$theme-colors: map.merge(
-  (
-    "brand": (
-      "base": $brand,
-      "text": $brand-text-color,
-      "hover-text": $brand-hover-text-color,
-    ),
-  ),
-  $theme-colors
-);
-
-// Adjust contrast threshold if needed
-$yiq-contrasted-threshold: 180 !default;
