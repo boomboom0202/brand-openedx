@@ -1,1 +1,81 @@
 
+// ============================================================================
+//  EKTU brand — Paragon overrides
+//  Imported AFTER Paragon core, so these rules fine-tune the compiled output
+//  (rounded brand buttons, brand typography, focus colors, etc.).
+// ============================================================================
+
+// Apply the brand typeface everywhere.
+body {
+  font-family: $font-family-base;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $headings-font-family;
+  letter-spacing: -0.01em;
+}
+
+// Primary / brand buttons in EKTU green with pill shape.
+.btn-primary,
+.btn-brand {
+  background-color: $primary-500;
+  border-color: $primary-500;
+  border-radius: 999px;
+  font-family: $headings-font-family;
+  font-weight: 600;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: $primary-700 !important;
+    border-color: $primary-700 !important;
+  }
+}
+
+.btn-outline-primary,
+.btn-outline-brand {
+  color: $primary-500;
+  border-color: $primary-500;
+  border-radius: 999px;
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-500;
+    border-color: $primary-500;
+    color: #fff;
+  }
+}
+
+// Links
+a {
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+
+// Brand-colored accents commonly used across MFEs.
+.bg-primary,
+.bg-brand {
+  background-color: $primary-500 !important;
+}
+
+.text-primary,
+.text-brand {
+  color: $primary-500 !important;
+}
+
+.border-primary {
+  border-color: $primary-500 !important;
+}
+
+// Header / footer surfaces that some MFEs render with the brand color.
+.bg-dark,
+footer.footer {
+  background-color: $primary-700;
+}
